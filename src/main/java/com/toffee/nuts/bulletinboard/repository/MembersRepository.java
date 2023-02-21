@@ -3,19 +3,29 @@ package com.toffee.nuts.bulletinboard.repository;
 import com.toffee.nuts.bulletinboard.domain.Members;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Repository;
 
 import java.lang.reflect.Member;
 import java.util.List;
 
 @Repository
+@Slf4j
 public class MembersRepository {
 
     @PersistenceContext
     private EntityManager em;
 
     public Long save(Members member) {
-        em.persist(member);
+        log.info(member.getPw());
+
+        if(member.getId() == null) {
+            em.persist(member);
+        } else {
+            log.info(member.getPw());
+            em.merge(member);
+        }
+
         return member.getId();
     }
 
@@ -34,7 +44,9 @@ public class MembersRepository {
                 .getResultList();
     }
 
-    public Members find(Long id) {
-        return em.find(Members.class, id);
+    public void delete(Long id) {
+        log.info("hey", id.toString());
+        Members member = findOne(1L);
+        em.remove(member);
     }
 }

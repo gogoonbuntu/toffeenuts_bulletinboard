@@ -18,8 +18,9 @@ public class Members {
 
     private String name;
 
-    @Embedded
-    private Address address;
+//    @Embedded
+//    private Address address;
+    private String pw;
 
     @OneToMany(mappedBy = "member")
     private List<Posts> posts = new ArrayList<>();

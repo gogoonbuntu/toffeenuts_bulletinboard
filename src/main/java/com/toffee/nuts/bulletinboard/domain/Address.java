@@ -8,4 +8,7 @@ import lombok.Getter;
 public class Address {
     private String city;
     private String zipcode;
+
+    public Address (String city, String zipcode) {
+    }
 }

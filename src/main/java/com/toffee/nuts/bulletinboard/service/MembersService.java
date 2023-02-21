@@ -4,6 +4,7 @@ package com.toffee.nuts.bulletinboard.service;
 import com.toffee.nuts.bulletinboard.domain.Members;
 import com.toffee.nuts.bulletinboard.repository.MembersRepository;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -13,6 +14,7 @@ import java.util.List;
 @Service
 @Transactional(readOnly = true)
 @RequiredArgsConstructor
+@Slf4j
 public class MembersService {
 
     @Autowired
@@ -26,6 +28,15 @@ public class MembersService {
         validateDuplicateMember(member);
         membersRepository.save(member);
         return member.getId();
+    }
+
+    public void save(Members member) {
+        log.info(member.getPw());
+        membersRepository.save(member);
+    }
+
+    public void delete(Long id) {
+        membersRepository.delete(id);
     }
 
     private void validateDuplicateMember(Members member) {

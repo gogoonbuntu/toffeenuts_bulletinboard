@@ -3,6 +3,7 @@
 <table>
     <tr th:each="members : ${members}">
         <td th:text="${members.id}"></td>
+        <td th:text="${members.name}"></td>
         <td th:text="${members.pw}"></td>
         <td>
             <a href="#" th:href="@{/members/{id}/delete (id=${members.id})}" role="button">삭제</a>

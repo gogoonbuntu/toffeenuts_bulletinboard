@@ -1,0 +1,8 @@
+
+<html xmlns:th="http://www.thymeleaf.org">
+    <form method="post" th:object="${form}">
+        <input th:field="*{id}" id="userid" type="text"/>
+        <input th:field="*{pw}" id="pw" type="password"/>
+        <button type="submit">로그인</button>
+    </form>
+</html>
