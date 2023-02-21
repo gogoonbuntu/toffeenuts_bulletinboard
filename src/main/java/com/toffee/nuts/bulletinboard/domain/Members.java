@@ -8,6 +8,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 @Entity
+@Table(name="TB_MEMBER")
 @Getter @Setter
 public class Members {
 

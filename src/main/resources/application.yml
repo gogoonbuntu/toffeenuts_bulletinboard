@@ -1,6 +1,6 @@
 spring:
     datasource:
-        url: jdbc:h2:~/dev/h2_test/bulleinboard;MVCC=TRUE
+        url: jdbc:h2:~/dev/h2_test/bulletinboard;
         username: sy
         password:
         driver-class-name: org.h2.Driver
