@@ -1,7 +1,7 @@
 # toffeenuts_bulletinboard
 
 ## SPEC
-- Java 11 -> Java 17 필요
+- Java 17
   - Spring 3.0.1
     - Spring Data Jpa
     - Lombok
