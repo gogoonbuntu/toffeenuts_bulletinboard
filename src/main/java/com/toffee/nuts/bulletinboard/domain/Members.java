@@ -1,15 +1,14 @@
 package com.toffee.nuts.bulletinboard.domain;
 
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
 import java.util.ArrayList;
 import java.util.List;
 
 @Entity
 @Table(name="TB_MEMBER")
-@Getter @Setter
+@Data
 public class Members {
 
     @Id @GeneratedValue

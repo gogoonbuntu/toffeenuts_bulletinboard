@@ -1,12 +1,12 @@
 package com.toffee.nuts.bulletinboard.repository;
 
 import com.toffee.nuts.bulletinboard.domain.Members;
+import jakarta.annotation.PostConstruct;
 import jakarta.persistence.EntityManager;
 import jakarta.persistence.PersistenceContext;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Repository;
 
-import java.lang.reflect.Member;
 import java.util.List;
 
 @Repository
@@ -48,5 +48,19 @@ public class MembersRepository {
         log.info("hey", id.toString());
         Members member = findOne(1L);
         em.remove(member);
+    }
+
+    /**
+     * 테스트용 데이터 추가
+     */
+    @PostConstruct
+    public void init() {
+
+        Members member = new Members();
+        member.setId(Long.valueOf("123"));
+        member.setPw("test!");
+        member.setName("테스터");
+
+        save(member);
     }
 }

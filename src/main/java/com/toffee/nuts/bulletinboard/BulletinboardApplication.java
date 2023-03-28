@@ -10,5 +10,4 @@ public class BulletinboardApplication {
 		SpringApplication.run(BulletinboardApplication.class, args);
 
 	}
-
 }

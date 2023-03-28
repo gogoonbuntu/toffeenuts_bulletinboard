@@ -2,12 +2,11 @@ package com.toffee.nuts.bulletinboard.domain;
 
 
 import jakarta.persistence.*;
-import lombok.Getter;
-import lombok.Setter;
+import lombok.Data;
 
 @Entity
 @Table(name="TB_POSTS")
-@Getter @Setter
+@Data
 public class Posts {
     @Id @GeneratedValue
     @Column(name="post_id")
