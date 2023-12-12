@@ -1,5 +1,6 @@
-package com.toffee.nuts.bulletinboard;
+package com.toffee.nuts.bulletinboard.controller;
 
+import com.toffee.nuts.bulletinboard.MembersForm;
 import com.toffee.nuts.bulletinboard.domain.Address;
 import com.toffee.nuts.bulletinboard.domain.Members;
 import com.toffee.nuts.bulletinboard.service.MembersService;

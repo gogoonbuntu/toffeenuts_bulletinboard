@@ -1,4 +1,4 @@
-package com.toffee.nuts.bulletinboard;
+package com.toffee.nuts.bulletinboard.controller;
 
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;

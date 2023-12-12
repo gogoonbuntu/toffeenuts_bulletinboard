@@ -1,3 +1,5 @@
+package com.toffee.nuts.bulletinboard.controller;
+
 import com.toffee.nuts.bulletinboard.MembersForm;
 import com.toffee.nuts.bulletinboard.SessionConstants;
 import com.toffee.nuts.bulletinboard.domain.Members;

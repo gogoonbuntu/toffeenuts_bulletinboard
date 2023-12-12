@@ -50,17 +50,17 @@ public class MembersRepository {
         em.remove(member);
     }
 
-    /**
-     * 테스트용 데이터 추가
-     */
-    @PostConstruct
-    public void init() {
-
-        Members member = new Members();
-        member.setId(Long.valueOf("123"));
-        member.setPw("test!");
-        member.setName("테스터");
-
-        save(member);
-    }
+//    /**
+//     * 테스트용 데이터 추가
+//     */
+//    @PostConstruct
+//    public void init() {
+//
+//        Members member = new Members();
+//        member.setId(Long.valueOf("123"));
+//        member.setPw("test!");
+//        member.setName("테스터");
+//
+//        save(member);
+//    }
 }
