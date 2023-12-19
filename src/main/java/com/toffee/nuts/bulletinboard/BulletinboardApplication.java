@@ -8,7 +8,6 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class BulletinboardApplication {
 
 	public static void main(String[] args) throws Exception {
-		TistoryController.postNew();
 		SpringApplication.run(BulletinboardApplication.class, args);
 	}
 }

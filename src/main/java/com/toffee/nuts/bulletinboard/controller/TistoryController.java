@@ -50,9 +50,7 @@ public class TistoryController {
     }
     //String accessToken = getAccessToken();
     static String accessToken = "73477bf54beca91045987ceebb199f14_4c9715b9726d7d9ac8d0c109ea6239a1";
-    public static void postNew() throws Exception {
-        String title = "tEST";
-        String content = "sdfasfawefawdf";
+    public static void postNew(String title, String content) throws Exception {
         String category = "개발/java";
         String url = "https://www.tistory.com/apis/post/write";
         String params =
